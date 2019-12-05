@@ -1,0 +1,179 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  font-family: Arial;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.latern {
+  border: 1px solid rgb(75, 75, 75);
+  border-radius: 35px;
+  background-color: rgb(75, 75, 75);
+}
+
+.box {
+  height: 400px;
+  width: 250px;
+  margin: 35px;
+  border-radius: 35px;
+  background-color: rgb(41, 41, 41);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lens {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  background-color: rgb(255, 255, 255);
+  margin: 10px;
+}
+
+.lens:nth-of-type(1) {
+  background-color: rgb(161, 24, 14);
+  animation-name: turn-on-red;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(3);
+}
+
+.lens:nth-of-type(2) {
+  background-color: rgb(201, 197, 9);
+  animation-name: turn-on-yellow;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(3);
+}
+
+.lens:nth-of-type(3) {
+  background-color: rgb(65, 192, 15);
+  animation-name: turn-on-green;
+  animation-duration: 1s;
+  animation-delay: 1.75s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(3);
+}
+
+@keyframes turn-on-red {
+  0% {
+    background-color: rgb(161, 24, 14);
+  }
+  100% {
+    background-color: rgb(0, 0, 0);
+  }
+}
+
+@keyframes turn-on-yellow {
+    0% {
+        background-color: rgb(201, 197, 9);
+    }
+    100% {
+        background-color: rgb(0, 0, 0);
+    }
+  }
+
+  
+  @keyframes turn-on-green {
+    0% {
+        background-color: rgb(65, 192, 15);
+    }
+    100% {
+        background-color: rgb(0, 0, 0);
+    }
+  }
+  
+
+.pole {
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 120px;
+  background-color: rgb(41, 41, 41);
+}
+
+.star-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.star {
+    z-index: -2;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+}
+
+.star:nth-of-type(1) {
+    left: 15%;
+}
+.star:nth-of-type(2) {
+    left: 18%;
+    top: 25%;
+}
+.star:nth-of-type(3) {
+    left: 38%;
+    top: 6%;
+}
+.star:nth-of-type(4) {
+    right: 35%;
+    bottom: 12%;
+    
+}
+.star:nth-of-type(5) {
+    right: 22%;
+    bottom: 5%;
+}
+.star:nth-of-type(6) {
+    right: 13%;
+    top: 20%;
+}
+.star:nth-of-type(7) {
+    right: 25%;
+    top: 40%;
+}
+
+.shooting-star-container {
+    z-index: -2;
+
+    position: absolute;
+    top: 45%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    /* border: 1px solid red; */
+}
+.shooting-star {
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: rgb(253, 255, 146);
+    position: absolute;
+    animation-name: shooting-star-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes shooting-star-animation {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 100%;
+    }
+  }
